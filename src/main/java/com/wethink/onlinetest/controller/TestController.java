@@ -10,6 +10,7 @@ public class TestController {
 	
 	public ResponseEntity<List<TestDTO>> getTests() {
 		List<TestDTO> list ;
+		System.out.println("test comment");
 		return null ;// ResponseEntity<List<TestDTO>>()
 		
 	}
