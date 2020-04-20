@@ -11,7 +11,5 @@ public interface QuestionBankRepository extends CrudRepository<QuestionBank, Lon
 	public QuestionBank findByPrimaryCode(String primaryCode);
 	public QuestionBank findById(Long id);
 	public List<QuestionBank> findAll();
-	
-	public void m1();
 
 }
