@@ -1,0 +1,24 @@
+kind: Macros
+metadata:
+  namespace: 辛哈德里拉茹22
+spec:
+  - name: "k8s.辛哈德里拉茹"
+    description: 辛哈德里拉茹
+    parameters:
+      辛哈德里拉茹: 辛哈德里拉茹
+      辛哈德里拉茹1: 辛哈德里拉茹1
+    processor:
+      - type: freemarker
+        description: "辛哈德里拉茹......."      
+        parameters:
+          template: |
+            { "metadata" : {
+              "labels": {
+                "辛哈德里拉茹": "${辛哈德里拉茹}",
+                    "辛哈德里拉茹1": "${辛哈德里拉茹1}",
+              }
+             }
+            }
+        variables:
+          辛哈德里拉茹: "#{#params['辛哈德里拉茹']}"
+          辛哈德里拉茹1: "#{#params['辛哈德里拉茹1']}"
