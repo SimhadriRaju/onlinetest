@@ -2,7 +2,7 @@
  metadata:
    namespace: k8s-여보세요
  spec:
-   - name: "k8s.AddLabel"
+   - name: "k8s-여보세요"
      condition:
        deployedType: k8s.Resources
      processor:
