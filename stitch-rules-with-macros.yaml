@@ -5,8 +5,8 @@ spec:
   - name: "k8s.AppAndEnvLabels"
     description: This is a macro for adding labels
     parameters:
-      application: undefined
-      environment: undefined
+      application: 辛哈德里拉茹
+      environment: 辛哈德里拉茹1
     processor:
       - type: freemarker
         description: "Adding app and env label to kubernetes spec"      
