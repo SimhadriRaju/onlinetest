@@ -1,0 +1,24 @@
+kind: Macros
+metadata:
+  namespace: common-k8s-tasks11
+spec:
+  - name: "k8s.AppAndEnvLabels"
+    description: This is a macro for adding labels
+    parameters:
+      application: 辛哈德里拉茹
+      environment: 辛哈德里拉茹1
+    processor:
+      - type: freemarker
+        description: "Adding app and env label to kubernetes spec"      
+        parameters:
+          template: |
+            { "metadata" : {
+              "labels": {
+                "application": "${application}",
+                    "environment": "${environment}",
+              }
+             }
+            }
+        variables:
+          application: "#{#params['application']}"
+          environment: "#{#params['environment']}"
