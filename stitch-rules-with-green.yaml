@@ -1,13 +1,13 @@
  kind: Rules
  metadata:
-   namespace: k8s-labels
+   namespace: k8s-labels-여보세요@여보세요.여보세요
  spec:
    - name: "k8s.AddLabel"
      condition:
        deployedType: k8s.Resources
      processor:
        - type: freemarker
-         description: "Adding label to kubernetes spec"
+         description: "Adding label to 여보세요@여보세요.여보세요 kubernetes spec"
          phase: POST_FLIGHT
          weight: 30
          merge:
