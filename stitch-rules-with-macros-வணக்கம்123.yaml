@@ -1,0 +1,21 @@
+kind: Macros
+metadata:
+  namespace: common-k8s-tasks-வணக்கம்33333333333333333333
+spec:
+  - name: "k8s.AppAndEnvLabels-வணக்கம்-33333333333333333333"
+    description: This is a macro for adding labels
+    parameters:
+      application: "வவணக்கம்33333333333333333333"
+      environment: "வணக்கம்33333333333333333333"
+    processor:
+      - type: freemarker
+        description: "Adding app and env label to kubernetes spec"      
+        parameters:
+          template: |
+            { "metadata" : {
+              "labels": {
+                "application": "${params['application']}",
+                "environment": "${params['environment']}",
+              }
+             }
+            }
