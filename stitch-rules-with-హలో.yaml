@@ -1,0 +1,22 @@
+ kind: Rules
+ metadata:
+   namespace: k8s-labels-హలోహలోహలో
+ spec:
+   - name: "k8s.AddLabel-హలోహలోహలోహలోహలో"
+     condition:
+       deployedType: k8s.Resources
+     processor:
+       - type: freemarker
+         description: "Adding label to kubernetes హలోహలోహలోహలోహలోహలో spec"
+         phase: POST_FLIGHT
+         weight: 30
+         merge:
+           type: overlay
+         parameters:
+           template: |
+             { "metadata" : {
+                "labels": {
+                  "labelToAdd": "addedLabel-హలోహలోహలోహలోహలో"
+                }
+               }
+             }
