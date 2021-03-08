@@ -1,0 +1,22 @@
+ kind: Rules
+ metadata:
+   namespace: k8s-jafnaf
+ spec:
+   - name: "k8s.AddLabel"
+     condition:
+       deployedType: k8s.Resources
+     processor:
+       - type: freemarker
+         description: "Adding label to jfnskfs kubernetes spec"
+         phase: POST_FLIGHT
+         weight: 30
+         merge:
+           type: overlay
+         parameters:
+           template: |
+             { "metadata" : {
+                "labels": {
+                  "labelToAdd": "addedLabel"
+                }
+               }
+             }
